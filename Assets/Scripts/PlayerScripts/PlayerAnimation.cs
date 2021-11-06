@@ -6,7 +6,7 @@ public class PlayerAnimation : MonoBehaviour
 {
 
     private Animator anim;
-
+    
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -42,15 +42,45 @@ public class PlayerAnimation : MonoBehaviour
         anim.SetTrigger("Kick2");
     }
 
-    // Start is called before the first frame update
-    void Start()
+    public void EnemyAttack(int attack)
     {
-        
+        if(attack == 0)
+        {
+            anim.SetTrigger("Attack1");
+        }
+        if(attack == 1)
+        {
+            anim.SetTrigger("Attack2");
+        }
+        if(attack == 2)
+        {
+            anim.SetTrigger("Attack3");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void playIdleAnimation()
     {
-        
+        anim.Play("Idle");
+    }
+
+    public void KnockDown()
+    {
+        anim.SetTrigger("KnockDown");
+    }
+
+    public void StandUp()
+    {
+        anim.SetTrigger("StandUp");
+    }
+
+    public void Hit()
+    {
+        anim.SetTrigger("Hit");
+    }
+
+    public void Death()
+    {
+        anim.SetTrigger("Death");
     }
 }
+

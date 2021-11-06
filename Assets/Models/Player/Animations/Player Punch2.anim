@@ -22752,15 +22752,15 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.074999996
-    functionName: AddForce
+  - time: 0.1
+    functionName: rightArmAttackOn
     data: 
     objectReferenceParameter: {fileID: 0}
-    floatParameter: 1
+    floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.15229765
-    functionName: Check4Hit
+  - time: 0.26666668
+    functionName: rightArmAttackOff
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
