@@ -49,13 +49,14 @@ public class AttackUniversal : MonoBehaviour
                     gameObject.CompareTag("LeftLeg")
                 )
                 {
-                    //hit[0].GetComponent<HealthScript>().ApplyDamage(damage,true);
+                    
+                    hit[0].GetComponent<HealthScript>().ApplyDamage(damage,true);
                 } else 
                 {
-                    //hit[0].GetComponent<HealthScript>().ApplyDamage(damage,false);
+                    hit[0].GetComponent<HealthScript>().ApplyDamage(damage,false);
                 }
             }
-            // Debug.Log(hit[0].gameObject.name);
+            //Debug.Log(hit[0].gameObject.name);
 
 
             gameObject.SetActive(false);

@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //
-    private PlayerAnimation playerAnimation;
+    private CharacterAnimation playerAnimation;
     private Rigidbody myBody;
 
     public float walkSpeed = 3f;
@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake()
     {
-        playerAnimation = GetComponentInChildren<PlayerAnimation>();
+        playerAnimation = GetComponentInChildren<CharacterAnimation>();
         myBody = GetComponent<Rigidbody>();
     }
 

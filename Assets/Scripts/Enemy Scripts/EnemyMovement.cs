@@ -6,7 +6,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    private PlayerAnimation enemyAnimation;
+    private CharacterAnimation enemyAnimation;
 
     private Rigidbody rigidbody;
     public float speed = 5f;
@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Awake()
     {
-        enemyAnimation = GetComponentInChildren<PlayerAnimation>();
+        enemyAnimation = GetComponentInChildren<CharacterAnimation>();
         rigidbody = GetComponent<Rigidbody>();
 
         playerTarget = GameObject.FindWithTag("Player").transform;

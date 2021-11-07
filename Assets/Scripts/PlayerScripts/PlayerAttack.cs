@@ -14,7 +14,7 @@ public enum ComboState
 
 public class PlayerAttack : MonoBehaviour
 {
-    private PlayerAnimation playerAnim;
+    private CharacterAnimation playerAnim;
     private bool activateTimerToReset;
 
     private float defaultComboTimer = 0.4f;
@@ -25,7 +25,7 @@ public class PlayerAttack : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        playerAnim = GetComponentInChildren<PlayerAnimation>();
+        playerAnim = GetComponentInChildren<CharacterAnimation>();
     }
 
     void Start()

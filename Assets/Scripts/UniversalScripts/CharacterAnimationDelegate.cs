@@ -9,6 +9,16 @@ public class CharacterAnimationDelegate : MonoBehaviour
     rightArmAttackPoint, 
     leftFootAttackPoint, 
     rightFootAttackPoint;
+
+    public float standUpTimer = 2f;
+
+
+    private CharacterAnimation animationScript;
+
+    void Awake() 
+    {
+        animationScript = GetComponent<CharacterAnimation>();
+    }
 //=============================================================//
     void leftArmAttackOn()
     {
@@ -62,4 +72,57 @@ public class CharacterAnimationDelegate : MonoBehaviour
         }
     }
 //=============================================================//
+    void TagLeftArm()
+    {
+        leftArmAttackPoint.tag = "LeftArm";
+    }
+
+    void UntagLeftArm()
+    {
+        leftArmAttackPoint.tag = "Untagged";
+    }
+//=============================================================//
+    void TagRightArm()
+    {
+        rightArmAttackPoint.tag = "RightArm";
+    }
+
+    void UntagRightArm()
+    {
+        rightArmAttackPoint.tag = "Untagged";
+    }
+//=============================================================//
+    void TagLeftFoot()
+    {
+        leftFootAttackPoint.tag = "LeftLeg";
+    }
+
+    void UntagLeftFoot()
+    {
+        leftFootAttackPoint.tag = "Untagged";
+    }
+
+//=============================================================//
+    void TagRightFoot()
+    {
+        rightFootAttackPoint.tag = "RightLeg";
+    }
+
+    void UntagRightFoot()
+    {
+        rightFootAttackPoint.tag = "Untagged";
+    }
+//=============================================================//
+
+    void EnemyStandUp()
+    {
+        Debug.Log("STANDUP");
+        StartCoroutine(StandUpAfterTime());
+    }
+
+    IEnumerator StandUpAfterTime()
+    {
+        yield return new WaitForSeconds(standUpTimer);
+        animationScript.StandUp();
+    }
 }
